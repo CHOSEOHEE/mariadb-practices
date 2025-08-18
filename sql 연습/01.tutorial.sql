@@ -1,0 +1,105 @@
+select * from pet;
+
+-- 함수, 상수, 리터럴, 연산식
+select version(), current_date "hello", 1 +2 from dual;
+
+-- 수학함수, 문자열 함수, 날짜함수
+select sin(pi()/4), upper("seoul"), curdate() from dual;
+
+-- 대소문자 구문이 없다.
+select VERSION(), current_DATE From DuaL;
+
+-- table 생성: DDL
+create table pet (
+	name varchar(100),
+    owner varchar(50),
+    species varchar(50),
+    gender char(1),
+    birth date,
+    death date
+);
+
+-- schema  확인
+describe pet;
+desc pet;
+
+-- table  삭제
+drop table pet;
+show tables;
+
+-- insert: DML(C)
+insert 
+	into pet 
+values('성탄이', '조서희', 'dog', 'm', '2007-12-25', null);
+
+-- select: DML(R)
+select * from pet;
+
+-- update: DML(U)
+update pet set name='성타니' where name = '성탄이';
+
+-- delete: DML(D)
+delete from pet where name = '성타니';
+
+update pet set death = null where name != 'boser';
+--
+-- 1998 이후에 태어난 아이들의 이름, 종, 생일을 출력하세요.
+--
+select name, species, birth from pet where birth >= '1998-01-01';
+
+--
+-- 개들중에 암컷만 이름, 종, 성별을 출력하세요.
+--
+
+select name, species, gender from pet where species = 'dog' and gender = 'f';
+
+--
+-- 새와 뱀들만의 이름, 종을 출력하세요.
+--
+ select name, species from pet where species in ('bird', 'snake');
+ 
+--
+-- 애완동물들의 이름과 생일을 제일 어린 순서대로 출력하세요.
+--
+select name, birth from pet order by birth desc;
+
+--
+-- 애완동물들의 이름과 생일을 제일 많은 순서대로 출력하세요.
+--
+select name, birth from pet order by birth asc;
+
+--
+-- 애완동물들 중에 살아있는 애들만 이름, 생일, 사망일을 출력하세요.
+--
+select name, birth, death from pet where death is null;
+
+--
+-- 애완동물들 중에 이름이 'b'로 시작하는 아이들의 이름만 출력하세요.
+--
+select name from pet where name like 'b%';
+
+--
+-- 애완동물들 중에 이름이 'fy'로 끝나는 아이들의 이름만 출력하세요.
+--
+select name from pet where name like '%fy';
+
+--
+-- 애완동물들 중에 이름이 'w'가 들어있는 아이들의 이름만 출력하세요.
+--
+select name from pet where name like '%w%';
+
+--
+-- 애완동물들 중에 이름이 5문자인 아이들의 이름만 출력하세요.
+--
+select name from pet where name like '_____';
+
+--
+-- 애완동물들 중에 이름이 b로 시작하고 6문자인 아이들의 이름만 출력하세요.
+--
+select name from pet where name like 'b_____';
+
+--
+-- 집계
+--
+select count(*), max(birth) from pet;
+
