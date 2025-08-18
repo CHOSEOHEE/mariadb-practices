@@ -152,7 +152,7 @@ WHERE
 GROUP BY a.title
 ORDER BY AVG(b.salary) ASC
 LIMIT 0 , 1;
-    
+
     
 --  3-2) 복수행 연산자: in, not, in, (비교연산자)any, (비교연산자)all
 
@@ -200,8 +200,26 @@ WHERE
         WHERE
             to_date = '9999-01-01'
                 AND salary > 50000)
-ORDER BY b.salary ASC;       
+ORDER BY b.salary ASC;   
 
+-- SOL3: subquery:where(any)
+SELECT 
+    a.first_name, b.salary
+FROM
+    employees a,
+    salaries b
+WHERE
+    a.emp_no = b.emp_no
+        AND b.to_date = '9999-01-01'
+        AND (a.emp_no , b.salary) = ANY (SELECT 
+            emp_no, salary
+        FROM
+            salaries
+        WHERE
+            to_date = '9999-01-01'
+                AND salary > 50000)
+ORDER BY b.salary ASC;
+        
    -- 예제5) 현재, 각 부서별로 최고 급여를 받고 있는 직원의 부서이름(dept_name), 이름(first_name), 연봉(salary)
    -- 총무 둘리 40000
    -- 개발 마이콜 50000
