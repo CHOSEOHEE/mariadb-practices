@@ -46,7 +46,7 @@ public class InsertEx02 {
 				if (pstmt != null) {
 					pstmt.close();
 				}
-				if (con != null) {
+				if (con != null) { 
 					con.close();
 				}
 			} catch (SQLException e) {

@@ -46,7 +46,7 @@ public class DeleteEx02 {
 					pstmt.close();
 				}
 				if (con != null) {
-					con.close();
+					con.close(); 
 				}
 			} catch (SQLException e) {
 				e.printStackTrace();
