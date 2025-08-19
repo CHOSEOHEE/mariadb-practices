@@ -17,7 +17,7 @@ public class InsertEx01 {
 		boolean result = false;
 
 		try {
-			// 1. JDBC Driver 로딩
+			// 1. JDBC Driver 로딩 
 //			Class.forName("oracle.jbdc.driver.OracleDriver");
 			Class.forName("org.mariadb.jdbc.Driver");
 

@@ -55,6 +55,6 @@ public class InsertEx02 {
 		}
 
 		return result;
-	}
+	} 
 
 }

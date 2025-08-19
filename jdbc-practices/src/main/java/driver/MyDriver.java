@@ -26,7 +26,7 @@ public class MyDriver implements Driver {
 		System.out.println("url:" + url);
 		System.out.println(info);
 		return new MyConnection();
-	}
+	} 
 
 	@Override
 	public boolean acceptsURL(String url) throws SQLException {
