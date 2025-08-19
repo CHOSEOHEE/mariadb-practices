@@ -278,8 +278,4 @@ public class MyConnection implements Connection {
 		return 0;
 	}
 
-	public static void main(String[] args) {
-
-	}
-
 }

@@ -11,9 +11,9 @@ import java.util.logging.Logger;
 
 public class MyDriver implements Driver {
 	static {
-		// System.out.println("static area");
-		// 드라이버 등록
 		try {
+			// System.out.println("static area");
+			// 드라이버 등록
 			DriverManager.registerDriver(new MyDriver());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -58,8 +58,5 @@ public class MyDriver implements Driver {
 		return null;
 	}
 
-	public static void main(String[] args) {
-
-	}
 
 }
