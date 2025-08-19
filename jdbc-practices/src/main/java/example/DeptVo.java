@@ -24,5 +24,10 @@ public class DeptVo {
 		this.name = name;
 	}
 	
+	@Override
+	public String toString() {
+		return "DeptVo [id=" + id + ", name=" + name + "]";
+	}
+	
 	
 }

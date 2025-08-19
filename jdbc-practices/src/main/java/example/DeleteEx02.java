@@ -53,7 +53,7 @@ public class DeleteEx02 {
 			}
 		}
 
-		return result;
+		return result; 
 	}
 
 }

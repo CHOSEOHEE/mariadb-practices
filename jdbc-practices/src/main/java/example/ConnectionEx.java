@@ -8,7 +8,7 @@ public class ConnectionEx {
  
 	public static void main(String[] args) {
 		Connection con = null;
-		try {
+		try { 
 			// 1. JDBC Driver 로닝
 //			Class.forName("oracle.jbdc.driver.OracleDriver");
 			Class.forName("org.mariadb.jdbc.Driver");

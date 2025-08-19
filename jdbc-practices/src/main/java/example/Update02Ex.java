@@ -26,7 +26,7 @@ public class Update02Ex {
 			con = DriverManager.getConnection(url, "webdb", "webdb");
 
 			// 3. Statement 준비
-			String sql = "update dept set name = '서비스개발팀' where id = ?";
+			String sql = "update dept set name = ? where id = ?";
 			pstmt = con.prepareStatement(sql);
 
 			// 4. Parameter Binding
@@ -56,9 +56,6 @@ public class Update02Ex {
 
 		return result;
 	}
-
-
-		
-	}
+}
 	
 

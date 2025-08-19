@@ -44,7 +44,7 @@ public class InsertEx02 {
 		} finally {
 			try {
 				if (pstmt != null) {
-					pstmt.close();
+					pstmt.close(); 
 				}
 				if (con != null) { 
 					con.close();

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Select02 {
+public class SelectEx02 {
 
 	public static void main(String[] args) {
 		List<DeptVo> list = search("개발");
@@ -20,6 +20,7 @@ public class Select02 {
 	private static List<DeptVo> search(String keyword) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
+		ResultSet rs = null;
 
 		List<DeptVo> result = new ArrayList<>();
 
@@ -39,7 +40,7 @@ public class Select02 {
 			pstmt.setString(1, "%" + keyword + "%");
 
 			// 5. SQL 실행
-			ResultSet rs = pstmt.executeQuery();
+			rs = pstmt.executeQuery();
 
 			// 6. 결과처리
 			while (rs.next()) {

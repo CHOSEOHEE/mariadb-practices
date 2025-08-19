@@ -14,6 +14,7 @@ public class InsertEx01 {
 
 	public static boolean insert(String department) {
 		Connection con = null;
+		Statement stmt = null;
 		boolean result = false;
 
 		try {
@@ -26,21 +27,22 @@ public class InsertEx01 {
 			con = DriverManager.getConnection(url, "webdb", "webdb");
 
 			// 3. Statement 생성
-			Statement stmt = con.createStatement();
+		    stmt = con.createStatement();
 
 			// 4. SQL 실행
-			String sql = "insery into dept(name) values('" + department + "')";
+			String sql = "insert into dept(name) values('" + department + "')";
 			int count = stmt.executeUpdate(sql);
 
 			result = count == 1;
-
-			System.out.println("연결성공");
 		} catch (ClassNotFoundException e) {
 			System.out.println("Driver Class Not Found");
 		} catch (SQLException e) {
 			System.out.println("error:" + e);
 		} finally {
 			try {
+				if (stmt != null) {
+					stmt.close();
+				}
 				if (con != null) {
 					con.close();
 				}
