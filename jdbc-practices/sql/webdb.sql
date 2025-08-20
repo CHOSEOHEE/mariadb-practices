@@ -22,7 +22,9 @@ select * from emp;
 --
 
 desc email;
-alter table email change id id int auto_increment;
+
+-- count
+select count(*) from email;
 
 -- findAll
 select id, first_name, last_name, email from email order by id desc;
@@ -32,3 +34,16 @@ select id, first_name, last_name, email from email order by id desc;
  
 -- insert
  insert into email(first_name, last_name, email) values ('둘', '리', 'dooly@gmail.com');
+ 
+ --
+ -- bookshop application
+ --
+ 
+ -- deleteBybook
+ delete from book where bookshop;
+ 
+ -- insert
+ insert into bookshop(id, name) values ('제목: ','작가: ');
+ insert into bookshop(id, title, status) values ('아이디:', '제목: ', '대여유무: ');
+ 
+ 
