@@ -1,0 +1,39 @@
+package bookmall.vo;
+
+public class OrderVo {
+	private Long id;
+	private String shipping;
+	private int payment;
+	private String status;
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	public String getShipping() {
+		return shipping;
+	}
+	public void setShipping(String shipping) {
+		this.shipping = shipping;
+	}
+	public int getPayment() {
+		return payment;
+	}
+	public void setPayment(int payment) {
+		this.payment = payment;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	
+	@Override
+	public String toString() {
+		return "OrderVo [id=" + id + ", shipping=" + shipping + ", payment=" + payment + ", status=" + status + "]";
+	}
+	
+	
+}
