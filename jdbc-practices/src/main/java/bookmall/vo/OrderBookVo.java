@@ -1,15 +1,18 @@
 package bookmall.vo;
 
 public class OrderBookVo {
-	private Long id;
+	private Long no;
 	private String title;
 	private int quantity;
 	private int payment;
-	public Long getId() {
-		return id;
+	private Long order_no;
+	private Long order_user_no;
+	
+	public Long getNo() {
+		return no;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setNo(Long no) {
+		this.no = no;
 	}
 	public String getTitle() {
 		return title;
@@ -29,11 +32,26 @@ public class OrderBookVo {
 	public void setPayment(int payment) {
 		this.payment = payment;
 	}
+	public Long getOrder_no() {
+		return order_no;
+	}
+	public void setOrder_no(Long order_no) {
+		this.order_no = order_no;
+	}
+	public Long getOrder_user_no() {
+		return order_user_no;
+	}
+	public void setOrder_user_no(Long order_user_no) {
+		this.order_user_no = order_user_no;
+	}
 	
 	@Override
 	public String toString() {
-		return "OrderBookVo [id=" + id + ", title=" + title + ", quantity=" + quantity + ", payment=" + payment + "]";
+		return "OrderBookVo [no=" + no + ", title=" + title + ", quantity=" + quantity + ", payment=" + payment
+				+ ", order_no=" + order_no + ", order_user_no=" + order_user_no + "]";
 	}
+	
+	
 	
 	
 }

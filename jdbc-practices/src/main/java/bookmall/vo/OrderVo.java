@@ -1,15 +1,16 @@
 package bookmall.vo;
 
 public class OrderVo {
-	private Long id;
+	private Long no;
 	private String shipping;
 	private int payment;
 	private String status;
-	public Long getId() {
-		return id;
+	
+	public Long getNo() {
+		return no;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setNo(Long no) {
+		this.no = no;
 	}
 	public String getShipping() {
 		return shipping;
@@ -32,8 +33,9 @@ public class OrderVo {
 	
 	@Override
 	public String toString() {
-		return "OrderVo [id=" + id + ", shipping=" + shipping + ", payment=" + payment + ", status=" + status + "]";
+		return "OrderVo [no=" + no + ", shipping=" + shipping + ", payment=" + payment + ", status=" + status + "]";
 	}
+	
 	
 	
 }

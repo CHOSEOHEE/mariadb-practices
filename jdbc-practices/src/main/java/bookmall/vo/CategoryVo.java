@@ -3,23 +3,25 @@ package bookmall.vo;
 public class CategoryVo {
 
 	  private String name;
-	  private Long id;
+	  private Long no;
+	  
 	  public String getName() {
 		  return name;
 	  }
 	  public void setName(String name) {
 		  this.name = name;
 	  }
-	  public Long getId() {
-		  return id;
+	  public Long getNo() {
+		  return no;
 	  }
-	  public void setId(Long id) {
-		  this.id = id;
+	  public void setNo(Long no) {
+		  this.no = no;
 	  }
 	  
 	  @Override
 	  public String toString() {
-		return "CategoryVo [name=" + name + ", id=" + id + "]";
+		return "CategoryVo [name=" + name + ", no=" + no + "]";
 	  }
+	  
 	  
 }

@@ -32,6 +32,9 @@ select id, first_name, last_name, email from email order by id desc;
 -- deleteByEmail
  delete from email where email = 'dooly@gmail.com';
  
+ -- deleteByEmail
+ delete
+ 
 -- insert
  insert into email(first_name, last_name, email) values ('둘', '리', 'dooly@gmail.com');
  
@@ -46,4 +49,14 @@ select id, first_name, last_name, email from email order by id desc;
  insert into bookshop(id, name) values ('제목: ','작가: ');
  insert into bookshop(id, title, status) values ('아이디:', '제목: ', '대여유무: ');
  
+ --
+ -- guestbook
+ --
  
+ desc guestbook;
+ 
+ -- insert
+ insert into guestbook values(null, '둘리', '1234', 'ㅎㅇ', now());
+ 
+ -- findAll
+ select id, name, date_format(reg_date, '%Y-%m-%d %h:%') from guestbook;

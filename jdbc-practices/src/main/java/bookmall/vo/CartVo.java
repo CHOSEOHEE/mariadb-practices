@@ -2,14 +2,17 @@ package bookmall.vo;
 
 public class CartVo {
 
-	private Long id;
+	private Long no;
 	private int quantity;
 	private int price;
-	public Long getId() {
-		return id;
+	private Long user_no;
+	private Long book_no;
+	
+	public Long getNo() {
+		return no;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setNo(Long no) {
+		this.no = no;
 	}
 	public int getQuantity() {
 		return quantity;
@@ -23,10 +26,25 @@ public class CartVo {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	public Long getUser_no() {
+		return user_no;
+	}
+	public void setUser_no(Long user_no) {
+		this.user_no = user_no;
+	}
+	public Long getBook_no() {
+		return book_no;
+	}
+	public void setBook_no(Long book_no) {
+		this.book_no = book_no;
+	}
 	
 	@Override
 	public String toString() {
-		return "CartVo [id=" + id + ", quantity=" + quantity + ", price=" + price + "]";
+		return "CartVo [no=" + no + ", quantity=" + quantity + ", price=" + price + ", user_no=" + user_no
+				+ ", book_no=" + book_no + "]";
 	}
+	
+	
 	
 }
